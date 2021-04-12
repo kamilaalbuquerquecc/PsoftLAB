@@ -1,3 +1,6 @@
+package rota;
+
+import padraoStrategy.StrategyRota;
 
 public class Rota {
 

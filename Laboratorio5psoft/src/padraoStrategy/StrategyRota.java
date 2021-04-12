@@ -1,3 +1,4 @@
+package padraoStrategy;
 
 public interface StrategyRota {
 	

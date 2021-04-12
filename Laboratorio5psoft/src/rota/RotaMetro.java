@@ -1,8 +1,11 @@
+package rota;
 
-public class RotaCarro implements StrategyRota{
+import padraoStrategy.StrategyRota;
+
+public class RotaMetro implements StrategyRota{
 
 	private static final long HORA_EM_MIN = 60; //MINUOS
-	private static final long KM_P_HORA = 50;
+	private static final long KM_P_HORA = 30;
 
 	@Override
 	public double calcularRota(double distancia) {
@@ -10,4 +13,6 @@ public class RotaCarro implements StrategyRota{
 		tempo= distancia/KM_P_HORA*HORA_EM_MIN;
 		return tempo;
 	}
+
+	
 }
