@@ -1,5 +1,8 @@
 package application;
 
+import java.util.Scanner;
+
+import padraoStrategy.StrategyRota;
 import rota.Rota;
 import rota.RotaCarro;
 import rota.RotaMetro;
@@ -10,31 +13,37 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		Scanner sc = new Scanner(System.in);
+		
 		RotaPedestre pedestre = new RotaPedestre();
 		RotaCarro carro = new RotaCarro();
 		RotaOnibus onibus = new RotaOnibus();
 		RotaMetro metro = new RotaMetro();
-		double distancia = 7.2;
 		
-		Rota rota = new Rota(distancia,pedestre);
-		System.out.println("Calculando a rota de Pedestre…");
-		rota.calcularRota();
-		System.out.println(rota.toString());
+		Rota rota = new Rota();
 		
-		rota.mudaRota(carro);
-		System.out.println("Calculando a rota de Carro…");
-		rota.calcularRota();
-		System.out.println(rota.toString());
+		while(true) {
+			System.out.println("Como você vai chegar nesse lugar? (pedestre, carro, onibus, metro)");
+			String transporte = sc.next();
 		
-		rota.mudaRota(onibus);
-		System.out.println("Calculando a rota de Onibus…");
-		rota.calcularRota();
-		System.out.println(rota.toString());
+			if(transporte.equals("pedestre")) {
+				rota.tipoTransporte(pedestre);
+			}
+			else if(transporte.equals("carro")) {
+				rota.tipoTransporte(carro);
+			}
+			else if(transporte.equals("onibus")) {
+				rota.tipoTransporte(onibus);
+			}
+			else if(transporte.equals("metro")) {
+				rota.tipoTransporte(metro);
+			}
+			else {
+				System.out.println("Digite novamente!");
+			}
+			System.out.println("----------------------------");
+		 }
 		
-		rota.mudaRota(metro);
-		System.out.println("Calculando a rota de Metro…");
-		rota.calcularRota();
-		System.out.println(rota.toString());
 
 	}
 
