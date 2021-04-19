@@ -6,6 +6,7 @@ public class HabilitadaParaPrimeiraDose implements SituacaoState {
 
 	@Override
 	public void habilitadaParaTomarAPrimeiraDose(Paciente paciente) {
+		System.out.println("Habilitada para primeira dose!");
 		paciente.setSituacao(this);
 		
 	}

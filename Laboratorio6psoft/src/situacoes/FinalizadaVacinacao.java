@@ -18,6 +18,7 @@ public class FinalizadaVacinacao implements SituacaoState{
 
 	@Override
 	public void finalizadaVacinacao(Paciente paciente) {
+		System.out.println("Vacinação concluida");
 		paciente.setSituacao(this);
 	}
 

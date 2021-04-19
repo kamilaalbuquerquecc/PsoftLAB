@@ -14,6 +14,7 @@ public class HabilitadaParaSegundaDose implements SituacaoState {
 
 	@Override
 	public void habilitadaParaSegundaDose(Paciente paciente) {
+		System.out.println("Habilitada para segunda dose!");
 		paciente.setSituacao(this);
 		
 	}

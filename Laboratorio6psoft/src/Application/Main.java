@@ -15,12 +15,14 @@ public class Main {
 		HabilitadaParaSegundaDose segundaDose = new HabilitadaParaSegundaDose();
 		FinalizadaVacinacao finalizada = new FinalizadaVacinacao();
 		
+		System.out.println("1° Paciente");
 		Paciente p1 = new Paciente();
 		primeiraDose.habilitadaParaTomarAPrimeiraDose(p1);
 		tomouPDose.tomouAPrimeiraDose(p1);
 		segundaDose.habilitadaParaSegundaDose(p1);
 		finalizada.finalizadaVacinacao(p1);
 		
+		System.out.println("\n2° Paciente");
 		Paciente p2 = new Paciente();
 		primeiraDose.habilitadaParaTomarAPrimeiraDose(p2);
 		tomouPDose.tomouAPrimeiraDose(p2);
