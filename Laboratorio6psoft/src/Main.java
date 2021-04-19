@@ -1,5 +1,3 @@
-package Application;
-
 import entities.Paciente;
 import situacoes.FinalizadaVacinacao;
 import situacoes.HabilitadaParaPrimeiraDose;
