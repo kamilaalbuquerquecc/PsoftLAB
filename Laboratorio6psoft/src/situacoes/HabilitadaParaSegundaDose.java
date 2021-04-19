@@ -1,6 +1,6 @@
 package situacoes;
 
-import Entity.Paciente;
+import entities.Paciente;
 
 public class HabilitadaParaSegundaDose implements SituacaoState {
 

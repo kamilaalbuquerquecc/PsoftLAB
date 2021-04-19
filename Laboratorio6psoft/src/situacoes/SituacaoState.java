@@ -1,6 +1,6 @@
 package situacoes;
 
-import Entity.Paciente;
+import entities.Paciente;
 
 public interface SituacaoState {
 	public void habilitadaParaTomarAPrimeiraDose(Paciente paciente);

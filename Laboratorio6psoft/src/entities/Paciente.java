@@ -1,7 +1,5 @@
-package Entity;
+package entities;
 
-import situacoes.HabilitadaParaPrimeiraDose;
-import situacoes.NaoHabilitadaParaVacina;
 import situacoes.SituacaoState;
 
 public class Paciente {
@@ -57,6 +55,86 @@ public class Paciente {
 		this.quantDias = quantDias;
 	}
 
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getCpf() {
+		return cpf;
+	}
+
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+
+	public String getEnd() {
+		return end;
+	}
+
+
+	public void setEnd(String end) {
+		this.end = end;
+	}
+
+
+	public String getNunSus() {
+		return nunSus;
+	}
+
+
+	public void setNunSus(String nunSus) {
+		this.nunSus = nunSus;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+
+	public String getProfissao() {
+		return profissao;
+	}
+
+
+	public void setProfissao(String profissao) {
+		this.profissao = profissao;
+	}
+
+
+	public String getComorbidades() {
+		return comorbidades;
+	}
+
+
+	public void setComorbidades(String comorbidades) {
+		this.comorbidades = comorbidades;
+	}
+	
 
 	
 	
