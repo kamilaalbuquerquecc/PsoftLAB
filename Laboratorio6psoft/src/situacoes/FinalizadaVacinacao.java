@@ -18,8 +18,10 @@ public class FinalizadaVacinacao implements SituacaoState{
 
 	@Override
 	public void finalizadaVacinacao(Paciente paciente) {
-		System.out.println("Vacinação concluida");
-		paciente.setSituacao(this);
+		if(paciente.getSituacao() instanceof HabilitadaParaSegundaDose){
+			System.out.println("Vacinação concluida, em 15 dias você estará imunizado.");
+			paciente.setSituacao(this);
+		}
 	}
 
 	

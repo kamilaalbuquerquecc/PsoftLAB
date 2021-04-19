@@ -1,6 +1,6 @@
 package Application;
 
-import Entity.Paciente;
+import entities.Paciente;
 import situacoes.FinalizadaVacinacao;
 import situacoes.HabilitadaParaPrimeiraDose;
 import situacoes.HabilitadaParaSegundaDose;
@@ -24,8 +24,12 @@ public class Main {
 		
 		System.out.println("\n2° Paciente");
 		Paciente p2 = new Paciente();
+		p2.setProfissao(true);
 		primeiraDose.habilitadaParaTomarAPrimeiraDose(p2);
 		tomouPDose.tomouAPrimeiraDose(p2);
+		p2.setQuantDias(15);
+		segundaDose.habilitadaParaSegundaDose(p2);
+		p2.setQuantDias(21);
 		segundaDose.habilitadaParaSegundaDose(p2);
 		finalizada.finalizadaVacinacao(p2);
 	}

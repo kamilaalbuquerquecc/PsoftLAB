@@ -10,8 +10,10 @@ public class TomouAPrimeiraDose implements SituacaoState{
 
 	@Override
 	public void tomouAPrimeiraDose(Paciente paciente) {
-		System.out.println("Tomou a primeira dose!");
-		paciente.setSituacao(this);
+		if(paciente.getSituacao() instanceof HabilitadaParaPrimeiraDose) {
+			System.out.println("Tomou a primeira dose!");
+			paciente.setSituacao(this);
+		}
 		
 	}
 

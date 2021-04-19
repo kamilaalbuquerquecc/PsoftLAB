@@ -1,5 +1,6 @@
 package entities;
 
+import situacoes.NaoHabilitadaParaVacina;
 import situacoes.SituacaoState;
 
 public class Paciente {
@@ -9,20 +10,22 @@ public class Paciente {
 	private String nunSus;
 	private String email;
 	private String telefone;
-	private String profissao;
-	private String comorbidades;
+	private boolean profissao;
+	private boolean comorbidades;
 	private int quantDias;
-	
-	private SituacaoState situacao;
+	private boolean faixaEtaria;
+	private SituacaoState situacao = new NaoHabilitadaParaVacina();
 	
 	
 	public Paciente() {
-		//situacao = new NaoHabilitadaParaVacina();
 	}
 
 
-	public Paciente(String name, String cpf, String end, String nunSus, String email, String telefone, String profissao,
-			String comorbidades) {
+	
+	
+	
+	public Paciente(String name, String cpf, String end, String nunSus, String email, String telefone,
+			boolean profissao, boolean comorbidades, int quantDias, boolean faixaEtaria) {
 		super();
 		this.name = name;
 		this.cpf = cpf;
@@ -32,10 +35,14 @@ public class Paciente {
 		this.telefone = telefone;
 		this.profissao = profissao;
 		this.comorbidades = comorbidades;
-		//situacao = new NaoHabilitadaParaVacina();
+		this.quantDias = quantDias;
+		this.faixaEtaria = faixaEtaria;
 	}
-	
-	
+
+
+
+
+
 	public SituacaoState getSituacao() {
 		return situacao;
 	}
@@ -116,26 +123,55 @@ public class Paciente {
 	}
 
 
-	public String getProfissao() {
+
+
+
+	public boolean isProfissao() {
 		return profissao;
 	}
 
 
-	public void setProfissao(String profissao) {
+
+
+
+	public void setProfissao(boolean profissao) {
 		this.profissao = profissao;
 	}
 
 
-	public String getComorbidades() {
+
+
+
+	public boolean isComorbidades() {
 		return comorbidades;
 	}
 
 
-	public void setComorbidades(String comorbidades) {
+
+
+
+	public void setComorbidades(boolean comorbidades) {
 		this.comorbidades = comorbidades;
 	}
-	
 
+
+
+
+
+	public boolean isFaixaEtaria() {
+		return faixaEtaria;
+	}
+
+
+
+
+
+	public void setFaixaEtaria(boolean faixaEtaria) {
+		this.faixaEtaria = faixaEtaria;
+	}
+
+
+	
 	
 	
 
